@@ -31,8 +31,7 @@ function myName(firstName, lastName){
 
 //function for dateWriter
 function dateWriter(year, month, day){
-  //return new date passed in
-  //return `${month} ${day}, ${year}`;
+  //return new date passed in after converting to date dash format
   return new Date(year, day, month).toLocaleDateString();
 
 }
