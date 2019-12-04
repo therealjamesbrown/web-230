@@ -16,7 +16,7 @@ var fullName, date, temperature, yearsOld, savingsAccountGoal;
 
 //variable defining
 fullName = myName(`James`, `Brown`);
-date = dateWriter(2019, `December`, 04);
+date = dateWriter(2019, 12, 04);
 temperature = formatNumber(66.666, 1);
 yearsOld = convertToInt(`27`);
 savingsAccountGoal = convertToFloat(`30000.00`);;
@@ -32,7 +32,8 @@ function myName(firstName, lastName){
 //function for dateWriter
 function dateWriter(year, month, day){
   //return new date passed in
-  return `${month} ${day}, ${year}`;
+  //return `${month} ${day}, ${year}`;
+  return new Date(year, day, month).toLocaleDateString();
 
 }
 
