@@ -14,7 +14,7 @@
 const header = require('../brown-header.js');
 
 // Call the console.log() function and output a well-formatted header
-console.log(header.display('James', 'Brown', 'Enter Exercise Name'));
+console.log(header.display('James', 'Brown', 'Exercise 3.3'));
 
 // Welcome message
 console.log('\n--Welcome to Exercise 3.3--\n');
