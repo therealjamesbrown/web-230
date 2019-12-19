@@ -44,4 +44,3 @@ for (index ; index < arr.length; index++) {
 }
 
 //end program
-
