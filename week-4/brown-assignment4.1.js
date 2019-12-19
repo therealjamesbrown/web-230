@@ -5,6 +5,7 @@
 ; Date:   12/19/2019
 ; Description: Code will not execute as there are two errors.
   This code is meant to provide an example of how arrays can be used.
+  expected output: The sum of all the indexes in the array is :750
 ;===========================================
 */
 
@@ -50,7 +51,7 @@ function sumIndexes(arrayParam){
   for(index = 0; index < arrayParam.length; index++){
     //inner for loop
     for(j=0; j < arrayParam[index].length; j++){
-      sum += arrayParam[index][j];
+      sum += arrayParam[inde][j];
     }
   }
   return sum;
@@ -59,7 +60,7 @@ function sumIndexes(arrayParam){
 
 //output
 //should log the sum of all the numbers in the array
-console.log(`\nThe sum of all the indexes in the array is: ${sumIndexes(arr2)}`);
+console.log(`\nThe sum of all the indexes in the array is: ${sumIndexes()}`);
 
 
 //end program
