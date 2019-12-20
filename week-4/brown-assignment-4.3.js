@@ -2,7 +2,7 @@
 ============================================
 ; Title:  Exercise 4.4 - Filtering
 ; Author: James Brown
-; Date:   Enter Date
+; Date:   12/20/2019
 ; Description: This code executes based on the requirements set in
   exercise 4.3/blackboard.
 ;===========================================

@@ -22,7 +22,7 @@ console.log('\n--Welcome to EExercise 4.1 - Discussion Solution for Laurie Maill
 //start program
 
 //arrays
-//JB first error identified. farmAnmals variable is declared as farmAnimals everywhere through the program. Addid an I to farmAnmals to fix issue.
+//JB first error identified. farmAnmals variable is declared as farmAnimals everywhere through the program. Added an I to farmAnmals to fix issue.
 let farmAnimals = ["Horse", "Pig", "Goat"];
 
 let domesticAnimals = ["Cat", "Dog", "Hamster"];
