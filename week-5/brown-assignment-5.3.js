@@ -55,6 +55,6 @@ composers = [
 
 //output, iterate over composer object
 composers.forEach(function(composer){
-  console.log(`Last Name: ${composer.lastName}, Genre: ${composer.genre}, Rating: ${composer.rating}`)
+  console.log(`Last Name: ${composer.lastName}, Genre: ${composer.genre}, Rating: ${composer.rating}`);
 });
 
