@@ -2,8 +2,8 @@
 ============================================
 ; Title:  Exercise 5.1
 ; Author: James Brown
-; Date:   Enter Date
-; Description: Enter Description
+; Date:   1/8/2020
+; Description: A simple program that calls a function to iterate over a new Map() object.
 ;===========================================
 */
 
