@@ -3,6 +3,7 @@
 ; Title:  Discussion 5.1
 ; Author: Emily Richter
 ; Date:   9 January 2020
+; Edits by: James Brown
 ; Description: Map object that displays how
 ; to say hello in the keyed language.
 ; There are two errors in this program.
