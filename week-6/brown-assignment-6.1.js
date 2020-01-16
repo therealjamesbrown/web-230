@@ -40,14 +40,14 @@ jamesObject = {
   birthYear 1992,
   family: ['Jane', 'Mark', 'Bob', 'Emily'],
   job: 'teacher',
-  //calcAge creates an age key value pair and adds it to the jamesObject
+  //calcAge creates an age property and adds it to the jamesObject
   //To use it, simply call the function outside of the object
   calcAge: function() {
       this.age = 2019 - this.birthYear;
   }
 };
 
-//call calcAge function within the james Object. This will create the age key value pair you see me calling below in the console log
+//call calcAge function within the james Object. This will create the age property you see me calling below in the console log
 Object.calcAge();
 
 //output
