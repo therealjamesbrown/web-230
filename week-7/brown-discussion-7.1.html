@@ -1,0 +1,94 @@
+<!--
+  James Brown
+  Assignment 7.1.html
+  1/20/2020
+  Professor Krasso
+  Description: This is a simple program that monitors the status of a program.
+  The program listen for clicks on buttons, then updates the page and html elements.
+  There are two errors.
+
+  Expected output:
+                  Program Status: Running
+
+
+
+                  James Brown
+                  Web 231 - Professor Krasso
+                  Date: 1/20/2020
+                  --Welcome to Discussion 7.1--
+
+                  Click the below button to end the program
+
+                  End Program
+-->
+
+<!DOCTYPE html>
+<head>
+  <style>
+  body{
+    text-align: center;
+  }
+  .dot {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}</style>
+
+</head>
+<body>
+  <header>
+    <script>
+      //variable declaration
+      var changeStatusIconColor, changeStatusText;
+
+      //function that takes no params. It simply listens for a click on the start program button, then loads the program
+      function loadHeader(){
+      //hide the button once it is clicked
+       document.getElementByI('loadHeader').style.visibility = "hidden";
+
+      //update the program status and update the background color of the circle status icon
+      changeStatusIconColor = document.getElementById('programStatus');
+      changeStatusIconColor.style.backgroundColor = "green";
+      changeStatusText = document.getElementById('programStatusText');
+      changeStatusText.innerHTML = "Program Status: Running"
+
+      //dipslay the second button to end the program
+       document.getElementById('welcomeHolder').innerHTML =
+       `James Brown<br>
+       Web 231 - Professor Krasso<br>
+       Date: 1/20/2020<br>
+       --Welcome to Discussion 7.1--<br><br>
+       <p>Click the below button to end the program</p>
+       <button id="endProgram" onclick="endProgram()" class="" type="button">End Program</button>`;
+      }
+
+      //function that listens for a click on the endProgram. It resets the system to the original status when clicked
+      function endProgram(){
+      //reload start program button and hide the end program button
+      document.getElementById('loadHeader').style.visibility = "visible";
+      document.getElementById('endProgram').style.visibilit = "hidden";
+
+      //change the status to off and set color back to red.
+      changeStatusIconColor = document.getElementById('programStatus');
+      changeStatusIconColor.style.backgroundColor = "red";
+      changeStatusText = document.getElementById('programStatusText');
+      changeStatusText.innerHTML = "Program Status: Off";
+
+      //reset the welcome holder text
+      document.getElementById('welcomeHolder').innerHTML = '';
+      }
+
+    </script>
+  </header>
+  <main>
+    <p id="programStatusText">Program Status: Off</p>
+    <span id="programStatus" class="dot"></span><br><br>
+    <p id="welcomeHolder"></p>
+    <button id="loadHeader" onclick="loadHeader()" class="" type="button">Start Program</button>
+  </main>
+  <footer>
+  </footer>
+</body>
+</html>
