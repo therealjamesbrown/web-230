@@ -1,0 +1,75 @@
+<!--
+============================================
+; Title:  brown-assignment-8.1.html
+; Author: Richard Krasso
+; Modified by: James Brown
+; Date:   1/30/2020
+; Description: Discussion 8.1. This page shows and hides a picture of my dogs. It also toggles on and off a description
+              of the dogs.
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 8.1</title>
+  <!--Jquery import-->
+  <script src="https://ajax.googleapis.com/ajax/libs/"></script>
+  <style>
+    body{
+      text-align: center;
+      background-color: rgb(184, 184, 184);
+    }
+
+    .dogs{
+      width: 30%;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <img src="dogs.jpg" alt="dogs photo" id="dogs" class="dogs">
+  </div>
+  <div id="descriptionText">
+    <h1>Theo and Avery</h1>
+    <p>Welcome to a page that uses JQuery to show and hide a picture and description of my dogs. Click a button to get started.</p>
+  </div>
+  <div id="learnText">
+    <p>Hello, we are both a husky breed and love to play! We always get jealous of each other when the other gets attention.</p>
+  </div>
+  <div id="button container">
+    <button id="showDoggos">Show Doggos</button>
+    <button id="hideDoggos">Hide Doggos</button>
+    <button id="learn">Learn About Doggos</button>
+  </div>
+<script>
+//Hide the photo when the document is loaded
+$(document).ready(function(){
+    $(".dogs").hide();
+    $("#learnText").hide();
+});
+
+//function to show the picture of the dogs when the show button is clicked
+$("#showDoggos").click(function(){
+    $(".dogs").show(1000);
+    $("#showDoggos").hide();
+    $("body").css("background-color", "white");
+  });
+
+//function to hide dogs when it is clicked
+$("#hideDoggos").click(function(){
+    $(".dogs").hide(1000);
+    $("#showDoggos").shw();
+  });
+
+//function to toggle the about text
+$("#learn").click(function(){
+    $("#learnText").toggle();
+});
+</script>
+
+</body>
+</html>

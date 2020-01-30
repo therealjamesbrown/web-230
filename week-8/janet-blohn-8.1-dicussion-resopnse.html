@@ -1,0 +1,77 @@
+<!--
+============================================
+; Title:  blohn-discussion-8.1.html
+; Author: Janet Blohn
+; Date:   28 January 2020
+; Modified By: N/A
+; Description: Discussion 8.1 DOM Manipulation (jQuery)
+; A simple HTML page with (2) jQuery errors.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+    <title>Blohn Discussion 8.1</title>
+    <style type="text/css">
+      .newColor {
+        background-color: lightblue;
+      }
+      ul {background-color: lightgray;
+        width: 200px;
+        padding-left: 0px;
+      }
+      #even {
+        background-color: blue;
+        color: white;
+      }
+      li {
+        padding-left: 20px;
+      }
+      </style>
+      <!-- Add jQuery URL -->
+      <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+      <script>
+        $(document).ready(function() {
+
+           $(function() {$("h3").animate({
+          "font-size": 40}, 500);});
+
+          $(function() {$("ul").fadeOut(slow).addClass("newColor").fadeIn("slow");});
+          $(function() {$("#even").fadeOut().show(300).fadeOut().fadeIn();});
+
+          $(function() {
+            $('li').click (function() {
+              this.style.color = "white";
+              $(this).css("background-color", "black");
+              });
+          })
+
+          $(function() {
+            $('#even').click (function() {
+              this.style.color = "black";
+              $(this).css("background-color", "white");
+              });
+            });
+        });
+      </script>
+  </head>
+  <body>
+    <h1>Discussion 8.1</h1>
+
+    <h2>Oatmeal Cookies</h2>
+
+    <h3>Ingredients</h3>
+
+    <ul>
+      <li>Oatmeal</li>
+      <li id="even">Raisins</li>
+      <li>Brown Sugar</li>
+      <li id="even">Eggs</li>
+      <li>Sugar</li>
+    </ul>
+
+    <p>Click on an ingredient to change its colors.</p>
+  </body>
+</html>
