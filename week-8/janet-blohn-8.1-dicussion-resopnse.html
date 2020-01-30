@@ -21,7 +21,8 @@
         width: 200px;
         padding-left: 0px;
       }
-      #even {
+      /*changing from id to class selector*/
+      .even {
         background-color: blue;
         color: white;
       }
@@ -37,8 +38,8 @@
 
            $(function() {$("h3").animate({
           "font-size": 40}, 500);});
-
-          $(function() {$("ul").fadeOut(slow).addClass("newColor").fadeIn("slow");});
+            //JB first error fadeout(slow) needs to be fadeout("slow")
+          $(function() {$("ul").fadeOut("slow").addClass("newColor").fadeIn("slow");});
           $(function() {$("#even").fadeOut().show(300).fadeOut().fadeIn();});
 
           $(function() {
@@ -49,7 +50,8 @@
           })
 
           $(function() {
-            $('#even').click (function() {
+            //jb error 2 if you are trying to have all the evens, you should use a class instead of and id, changing #even to .even
+            $('.even').click (function() {
               this.style.color = "black";
               $(this).css("background-color", "white");
               });
@@ -66,9 +68,10 @@
 
     <ul>
       <li>Oatmeal</li>
-      <li id="even">Raisins</li>
+    <!--updating from <li id="even> to <li class="even">-->
+      <li class="even">Raisins</li>
       <li>Brown Sugar</li>
-      <li id="even">Eggs</li>
+      <li class="even">Eggs</li>
       <li>Sugar</li>
     </ul>
 
