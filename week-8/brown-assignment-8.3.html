@@ -1,0 +1,126 @@
+<!--
+============================================
+; Title:  Brown-assignment-8.3.html
+; Author: Richard Krasso
+; Modified by: James Brown
+; Date:   1/30/2020
+; Description: Discussion 8.3
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 8.3</title>
+  <!--Google Roboto Font Import-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <!--JQUERY import-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style>
+    ul{
+      margin: 0 auto;
+    }
+    h3{
+      margin-bottom: 20px;
+      margin-left: 20px;
+      border-top: 5px solid rgb(214, 22, 22);
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    tr:nth-child(even){
+      background-color: rgb(226, 226, 226);
+    }
+
+    tr:nth-child(odd){
+      background-color: rgb(255, 0, 0);
+    }
+
+    .fruits{
+      margin-bottom: 20px;
+      margin-left: 20px;
+      border-top: 5px solid rgb(199, 199, 199);
+    }
+  </style>
+</head>
+<body>
+  <!--Begin Part A-->
+  <h3>Lorem Ipsum</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit erat nec eros finibus posuere. Praesent malesuada augue sit amet interdum dapibus. Maecenas tempus, orci non facilisis lobortis, lectus est suscipit nisl, sit amet luctus dolor dui sed eros. Sed ultrices at felis vitae rhoncus. Nam sit amet feugiat nunc, et tincidunt augue. Vestibulum at enim quis nisl aliquet vehicula vitae id felis. Donec dui turpis, ultricies sed venenatis nec, molestie vitae neque. Suspendisse varius eros massa, non pretium mi pellentesque vel.</p>
+  <button id="loremToggle">Toggle</button>
+
+  <!--Script to toggle lorem paragraph on and off-->
+  <script>
+    $(function(){
+    $("#loremToggle").click(function(){
+    $("p").toggle();
+    });
+  });
+  </script>
+  <!--End Part A-->
+
+
+
+  <!--Part B-->
+  <h3 class="fruits">Fruits</h3>
+  <div id="fruits"></div>
+  <script>
+    //variable declaration
+    var fruitsArray, out;
+
+    //assigning values to the fruits array
+    fruitsArray = [
+      {
+        id: '1',
+        type: 'apple'
+      },
+      {
+        id: '2',
+        type: 'banana'
+      },
+      {
+        id: '3',
+        type: 'orange'
+      },
+      {
+        id: '4',
+        type: 'kiwi'
+      },
+      {
+        id: '5',
+        type: 'strawberry'
+      }
+    ];
+
+//define out so you can get the table set up before adding the array of IDs in.
+out = "<table><tr><th>ID: </th><th>Type</th></tr>";
+
+//for loop, to loop the object and add each table row and section
+  for (var i = 0; i < fruitsArray.length; i++){
+  out += "<tr><td class=idClick>"+ fruitsArray[i].id + "</td><td>"+fruitsArray[i].type+"</td></tr>";
+}
+
+//call get element by id to assign out to fruits div container
+document.getElementById('fruits').innerHTML = out;
+
+//jquery function to listen for a click on the ID, get the value found through the for loop, and the alert the values to the user
+$(function(){
+  $(".idClick").click(function(event){
+    event.preventDefault();
+    //stores the fruit ID
+    var fruitId = $(this).text();
+
+    //stores the fruit type
+    var fruitType = $(this).closest("td").next().text();
+
+    //alert the user the fruit id and type
+    alert(`Fruit ID: ${fruitId}\nFruit Type: ${fruitType}`);
+  });
+});
+</script>
+<!--End Part B-->
+</body>
+</html>
