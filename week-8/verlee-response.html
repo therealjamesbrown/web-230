@@ -1,0 +1,61 @@
+<!--
+============================================
+; Title: washington-discussion-7.1
+; Author: Verlee Washington
+; Date:   28 January 2020
+; Modified by:
+; Description: Create a simple HTML page with
+; at least 2 jQuery errors.
+;===========================================
+
+output expected
+Setting Text Content
+Hello Everyone!
+Hello Everyone!
+Getting Text Content
+Hello World!
+Hello Everyone!
+Hello People!
+Hello Everyone!
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>Setting Text Content</h1>
+
+<h2 id="01">Hello World!</h2>
+<h2 id="02">Hello Everyone!</h2>
+
+<script>
+$(document).ready(function() {
+  var myElement = $("#01");
+  //JB Error #1: Missing quotes around the text inside the function.
+  myElement.text('Hello Everyone!');
+});
+</script>
+
+
+<h1>Getting Text Content</h1>
+
+<h2 id="01">Hello World!</h2>
+<h2 id="02">Hello Everyone!</h2>
+<h2 id="03">Hello People!</h2>
+
+<p id="demo"></p>
+
+<script>
+$(document).ready(function() {
+  //Jb Error #2: missing the pound sign, so the id was getting picked up accordingly. Added # to $(02) to fix the issue.
+  var myElement = $("#02");
+  var myText = myElement.text();
+  $("#demo").text(myText);
+});
+</script>
+
+</body>
+</html>
